@@ -12,6 +12,9 @@ class Department(models.Model):
     D_name = models.CharField(max_length=255)
     F_id = models.ForeignKey(Faculty, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.D_name
+
 
 class Address(models.Model):
     Gvernorate = models.CharField(max_length=255)
@@ -43,6 +46,9 @@ class Professor(models.Model):
     Salary = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField()
 
+    def __str__(self):
+        return f"{self.F_Name} {self.L_Name}"
+
 
 class Subjects(models.Model):
     Sub_name = models.CharField(max_length=255)
@@ -58,6 +64,9 @@ class Course(models.Model):
     Duration = models.TimeField()
     P_id = models.ForeignKey(Professor, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return f"{self.Sub_id.Sub_name} - {self.P_id}"
+
 
 class Course_Enrolment(models.Model):
     C_id = models.ForeignKey(Course, on_delete=models.PROTECT)
@@ -69,3 +78,6 @@ class Exams(models.Model):
     Date = models.DateField()
     Time = models.TimeField()
     Duration = models.DurationField()
+
+    def __str__(self):
+        return f"{self.C_id} - {self.Date} - {self.Time}"

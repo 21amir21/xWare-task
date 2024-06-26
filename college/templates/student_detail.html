@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%; /* Ensure image fits within container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any default inline-block spacing */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <td>{{ student.id }}</td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td>{{ student.F_Name }}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{ student.L_Name }}</td>
+            </tr>
+            <tr>
+                <th>First Phone</th>
+                <td>{{ student.F_Phone }}</td>
+            </tr>
+            <tr>
+                <th>Last Phone</th>
+                <td>{{ student.L_Phone }}</td>
+            </tr>
+            <tr>
+                <th>Birth Date</th>
+                <td>{{ student.Birth_Date }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ student.image.url }}" alt="{{ student.F_Name }} {{ student.L_Name }}" ></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

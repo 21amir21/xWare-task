@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Style for the image */
+        img.professor-image {
+            max-width: 400px; /* Adjust maximum width as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any default inline-block spacing */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Professor Information</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <td>{{ professor.id }}</td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td>{{ professor.F_Name }}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{ professor.L_Name }}</td>
+            </tr>
+            <tr>
+                <th>Faculty</th>
+                <td>{{ professor.F_id }}</td> <!-- Replace with actual faculty display -->
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>{{ professor.D_id }}</td> <!-- Replace with actual department display -->
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ professor.age }}</td>
+            </tr>
+            <tr>
+                <th>Salary</th>
+                <td>{{ professor.Salary }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ professor.image.url }}" alt="{{ professor.F_Name }} {{ professor.L_Name }}" class="professor-image"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

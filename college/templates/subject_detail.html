@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subject Detail</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Subject Information</h1>
+      <table>
+        <tr>
+          <th>ID</th>
+          <td>{{ subject.id }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ subject.Sub_name }}</td>
+        </tr>
+        <tr>
+          <th>Code</th>
+          <td>{{ subject.Sub_code }}</td>
+        </tr>
+        <tr>
+          <th>Faculty</th>
+          <td>{{ subject.F_id }}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
