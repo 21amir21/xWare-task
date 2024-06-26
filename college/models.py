@@ -37,7 +37,7 @@ class Professor(models.Model):
     F_Name = models.CharField(max_length=255)
     L_Name = models.CharField(max_length=255)
     age = models.PositiveIntegerField()
-    Salary = models.DecimalField()
+    Salary = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField()
 
 
