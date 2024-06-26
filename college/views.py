@@ -16,7 +16,7 @@ def create_or_edit_faculty(request, pk=None):
         faculty = get_object_or_404(Faculty, pk=pk)
     else:
         faculty = Faculty()
-    # faculty_form = FacultyForm()
+
     if request.method == "POST":
         faculty_form = FacultyForm(request.POST, instance=faculty)
         if faculty_form.is_valid():
