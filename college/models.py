@@ -49,6 +49,9 @@ class Subjects(models.Model):
     Sub_code = models.CharField(max_length=255, unique=True)  # to make it unique
     F_id = models.ForeignKey(Faculty, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.Sub_name
+
 
 class Course(models.Model):
     Sub_id = models.ForeignKey(Subjects, on_delete=models.PROTECT)
